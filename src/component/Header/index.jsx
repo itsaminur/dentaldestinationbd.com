@@ -105,7 +105,7 @@ const Header = () => {
                             }
                         }}
                     >
-                        <img src={LogoWhite} />
+                        <img src={LogoWhite} alt='Logo' />
                     </Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
