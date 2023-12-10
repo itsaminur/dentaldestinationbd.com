@@ -7,43 +7,35 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import LogoWhite from '../../images/logo_simple_full.png';
+import { Link } from '@mui/material';
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Home', 'About Us', 'Services', 'Blog', 'Contact Us'];
 
 const Header = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
-    };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
     };
 
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
 
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
-
     return (
-        <AppBar position="static">
+        <AppBar position="sticky" top="0">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Box sx={{
                         display: {
                             xs: 'none',
                             md: 'flex'
-                        }, mr: 1,
+                        }, mr: {md: 4},
+
                         "& img": {
                             width: '164px'
                         }
@@ -107,7 +99,7 @@ const Header = () => {
                     >
                         <img src={LogoWhite} alt='Logo' />
                     </Box>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent:'center' }}>
                         {pages.map((page) => (
                             <Button
                                 key={page}
@@ -118,35 +110,12 @@ const Header = () => {
                             </Button>
                         ))}
                     </Box>
-
-                    <Box sx={{ flexGrow: 0 }}>
-                        <Tooltip title="Open settings">
-                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-                            </IconButton>
-                        </Tooltip>
-                        <Menu
-                            sx={{ mt: '45px' }}
-                            id="menu-appbar"
-                            anchorEl={anchorElUser}
-                            anchorOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            open={Boolean(anchorElUser)}
-                            onClose={handleCloseUserMenu}
-                        >
-                            {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
-                                </MenuItem>
-                            ))}
-                        </Menu>
+                    <Box>
+                        {/* <Link color="inherit" href="tel:+8801327429987">Call Us: +8801327429987</Link> */}
+                        <Button variant="contained" href="tel:+8801327429987" sx={{  }}>
+                            {/* Make an Appointment */}
+                            Call Us: +8801327429987
+                        </Button>
                     </Box>
                 </Toolbar>
             </Container>
