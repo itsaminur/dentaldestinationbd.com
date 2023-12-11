@@ -112,8 +112,8 @@ const Header = () => {
                     </Box>
                     <Box>
                         {/* <Link color="inherit" href="tel:+8801327429987">Call Us: +8801327429987</Link> */}
-                        <Button variant="contained" href="tel:+8801327429987" sx={{  }}>
-                            {/* Make an Appointment */}
+                        <Button variant="contained" href="tel:+8801327429987" sx={{ maxWidth:'218px', flexDirection:'column', textAlign:'center', lineHeight: {xs: '1.2', sm:'1.75'} }}>
+                            {/* <Typography component="span" textAlign="center">For Appointment</Typography> */}
                             Call Us: +8801327429987
                         </Button>
                     </Box>
