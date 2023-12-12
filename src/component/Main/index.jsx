@@ -16,8 +16,9 @@ const Main = () => {
 
     return (
         <Box sx={{
-            background: '#9f9f9f',
+            background: '#f4f4f4',
             height: 'calc(100vh - 70px)',
+            backgroundImage:`url(${process.env.PUBLIC_URL}/slide_img_1.jpg)`,
         }}>
             <Container sx={{
                 height: '100%',
@@ -30,9 +31,9 @@ const Main = () => {
                             For your any kind of dental care
                         </Typography>
                         <Box sx={{
-                            display:'flex',
-                            flexDirection:'column',
-                            gap:'10px'
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: '10px'
                         }}>
                             <TextField size='small' type='text' id="outlined-basic" label="Name" variant="outlined" />
                             <TextField size='small' type='number' id="outlined-basic" label="Phone Number" variant="outlined" />
@@ -43,17 +44,19 @@ const Main = () => {
                             >
                                 Appointment
                             </Button>
+                            <br />
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                startIcon={<LocationOnIcon />} // Optional icon
+                                onClick={openLocation}
+                            >
+                                Show Location
+                            </Button>
+                            <Typography>
+                                dentaldestinationbd@gmail.com 01327429987
+                            </Typography>
                         </Box>
-                        dentaldestinationbd@gmail.com
-                        01327429987
-                        <Button
-                            variant="contained"
-                            color="primary"
-                            startIcon={<LocationOnIcon />} // Optional icon
-                            onClick={openLocation}
-                        >
-                            Show Location
-                        </Button>
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <TabPanel />
