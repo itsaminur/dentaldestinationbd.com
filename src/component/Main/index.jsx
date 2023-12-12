@@ -16,9 +16,9 @@ const Main = () => {
 
     return (
         <Box sx={{
-            background: '#f4f4f4',
+            background: 'radial-gradient(#bac5d000, #39759c5e)',
             height: 'calc(100vh - 70px)',
-            backgroundImage:`url(${process.env.PUBLIC_URL}/slide_img_1.jpg)`,
+            // backgroundImage: `url(${SlideImageOne})`,
         }}>
             <Container sx={{
                 height: '100%',
@@ -26,7 +26,13 @@ const Main = () => {
                 alignItems: 'center'
             }}>
                 <Grid container spacing={1}>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={6} sx={{
+                        display:'flex',
+                        justifyContent:'center',
+                        alignItems:'center',
+                        flexDirection:'column',
+                        width:'80%',
+                    }}>
                         <Typography>
                             For your any kind of dental care
                         </Typography>
