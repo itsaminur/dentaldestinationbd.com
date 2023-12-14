@@ -4,6 +4,8 @@ import { Button, Container, Grid, TextField, Typography } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ImageSlider from '../ImageSlider';
 import TabPanel from '../TabPanel';
+
+import SlideImageOne from '../../images/dental-care_5997318.png';
 const Main = () => {
 
     // Replace this with your desired location
