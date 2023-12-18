@@ -13,7 +13,13 @@ import MenuItem from '@mui/material/MenuItem';
 import LogoWhite from '../../images/logo_simple_full.png';
 import { Link } from '@mui/material';
 
-const pages = ['Home', 'About Us', 'Services', 'Blog', 'Contact Us'];
+const pages = [
+    'Home',
+    // 'About Us',
+    // 'Services',
+    // 'Blog',
+    // 'Contact Us'
+];
 
 const Header = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -34,7 +40,7 @@ const Header = () => {
                         display: {
                             xs: 'none',
                             md: 'flex'
-                        }, mr: {md: 4},
+                        }, mr: { md: 4 },
 
                         "& img": {
                             width: '164px'
@@ -99,7 +105,7 @@ const Header = () => {
                     >
                         <img src={LogoWhite} alt='Logo' />
                     </Box>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent:'center' }}>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
                         {pages.map((page) => (
                             <Button
                                 key={page}
@@ -112,7 +118,7 @@ const Header = () => {
                     </Box>
                     <Box>
                         {/* <Link color="inherit" href="tel:+8801327429987">Call Us: +8801327429987</Link> */}
-                        <Button variant="contained" href="tel:+8801327429987" sx={{ maxWidth:'218px', flexDirection:'column', textAlign:'center', lineHeight: {xs: '1.2', sm:'1.75'} }}>
+                        <Button variant="contained" href="tel:+8801327429987" sx={{ maxWidth: '218px', flexDirection: 'column', textAlign: 'center', lineHeight: { xs: '1.2', sm: '1.75' } }}>
                             {/* <Typography component="span" textAlign="center">For Appointment</Typography> */}
                             Call Us: +8801327429987
                         </Button>

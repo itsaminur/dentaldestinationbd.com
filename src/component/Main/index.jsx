@@ -29,21 +29,26 @@ const Main = () => {
             }}>
                 <Grid container spacing={1}>
                     <Grid item xs={12} md={6} sx={{
-                        display:'flex',
-                        justifyContent:'center',
-                        alignItems:'center',
-                        flexDirection:'column',
-                        width:'80%',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        flexDirection: 'column',
+                        width: '80%',
                     }}>
-                        <Typography>
-                            For your any kind of dental care
+                        <Typography sx={{
+                            fontSize: '1.3rem',
+                            fontWeight: '600',
+                            color: '#004670',
+                            mb: 1,
+                        }}>
+                            For Your Any Kind of Dental Care
                         </Typography>
                         <Box sx={{
                             display: 'flex',
                             flexDirection: 'column',
                             gap: '10px'
                         }}>
-                            <TextField size='small' type='text' id="outlined-basic" label="Name" variant="outlined" />
+                            {/* <TextField size='small' type='text' id="outlined-basic" label="Name" variant="outlined" />
                             <TextField size='small' type='number' id="outlined-basic" label="Phone Number" variant="outlined" />
                             <TextField size='small' type='text' id="outlined-basic" label="Problem" variant="outlined" />
                             <Button
@@ -51,19 +56,34 @@ const Main = () => {
                                 color="primary"
                             >
                                 Appointment
+                            </Button> */}
+                            <Button variant="contained" href="tel:+8801327429987" sx={{ textAlign: 'center', lineHeight: { xs: '1.2', sm: '1.75' } }}>
+                                {/* <Typography component="span" textAlign="center">For Appointment</Typography> */}
+                                Call Us: +8801327429987
                             </Button>
-                            <br />
+                            <Typography textAlign="center" fontWeight="600">Or Visit</Typography>
                             <Button
                                 variant="contained"
                                 color="primary"
                                 startIcon={<LocationOnIcon />} // Optional icon
                                 onClick={openLocation}
                             >
-                                Show Location
+                                Our Location
                             </Button>
-                            <Typography>
-                                dentaldestinationbd@gmail.com 01327429987
-                            </Typography>
+                            <Box sx={{
+                                "& .MuiTypography-root":{
+                                    fontSize:'.85rem',
+                                    color:'#626262',
+                                }
+                            }}>
+                                <Typography><strong>Address:</strong> Sector 12 Moylar Mor, Uttara, Dhaka-1230</Typography>
+                                <Typography>
+                                    <strong>Email:</strong> dentaldestinationbd@gmail.com 01327429987
+                                </Typography>
+                                <Typography>
+                                    <strong>Phone:</strong> 01327429987
+                                </Typography>
+                            </Box>
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={6}>
